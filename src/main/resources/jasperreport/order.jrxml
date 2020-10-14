@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.14.0.final using JasperReports Library version 6.14.0-2ab0d8625be255bf609c78e1181801213e51db8f  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="order" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d14f4d8c-8933-48af-b58b-8b26090cf96e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NO_DATA_ADAPTER"/>
+	<parameter name="CustomerID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["HANAR"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ShowCustomerID" class="java.lang.Boolean" isForPrompting="false">
+		<defaultValueExpression><![CDATA[java.lang.Boolean.TRUE]]></defaultValueExpression>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[Northwind.Orders(CustomerID == $P{CustomerID})]]>
+	</queryString>
+	<field name="ShipPostalCode" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipPostalCode"/>
+		<fieldDescription><![CDATA[ShipPostalCode]]></fieldDescription>
+	</field>
+	<field name="ShippedDate" class="java.sql.Date">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShippedDate"/>
+		<fieldDescription><![CDATA[ShippedDate]]></fieldDescription>
+	</field>
+	<field name="OrderDate" class="java.sql.Date">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="OrderDate"/>
+		<fieldDescription><![CDATA[OrderDate]]></fieldDescription>
+	</field>
+	<field name="OrderID" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="OrderID"/>
+		<fieldDescription><![CDATA[OrderID]]></fieldDescription>
+	</field>
+	<field name="Freight" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="Freight"/>
+		<fieldDescription><![CDATA[Freight]]></fieldDescription>
+	</field>
+	<field name="RequiredDate" class="java.sql.Date">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="RequiredDate"/>
+		<fieldDescription><![CDATA[RequiredDate]]></fieldDescription>
+	</field>
+	<field name="ShipCity" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipCity"/>
+		<fieldDescription><![CDATA[ShipCity]]></fieldDescription>
+	</field>
+	<field name="ShipCountry" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipCountry"/>
+		<fieldDescription><![CDATA[ShipCountry]]></fieldDescription>
+	</field>
+	<field name="EmployeeID" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="EmployeeID"/>
+		<fieldDescription><![CDATA[EmployeeID]]></fieldDescription>
+	</field>
+	<field name="ShipVia" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipVia"/>
+		<fieldDescription><![CDATA[ShipVia]]></fieldDescription>
+	</field>
+	<field name="CustomerID" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="CustomerID"/>
+		<fieldDescription><![CDATA[CustomerID]]></fieldDescription>
+	</field>
+	<field name="ShipAddress" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipAddress"/>
+		<fieldDescription><![CDATA[ShipAddress]]></fieldDescription>
+	</field>
+	<field name="ShipName" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="ShipName"/>
+		<fieldDescription><![CDATA[ShipName]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="3e0f911f-ce81-4914-8273-fc83d7b9eb1e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a73e5ba-d8b9-4556-b3c9-dcb15ae72fc8"/>
+				</reportElement>
+				<text><![CDATA[OrderID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="30" uuid="f5f99576-6461-4122-ace6-2ba90c3634e6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4928692-b248-42ac-b3a2-77ba3a55473e"/>
+				</reportElement>
+				<text><![CDATA[EmployeeID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="30" uuid="19a9169c-f1ab-453a-a9da-8691745fe7f4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6409fc7-9c07-4ce2-b6ed-cf4a6936acb3"/>
+				</reportElement>
+				<text><![CDATA[ShipAddress]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="30" uuid="3f65dd23-11ba-473e-913a-aeccf29ae0d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="704631c7-dd69-49bd-9044-d40bdf64c2a9"/>
+				</reportElement>
+				<text><![CDATA[CustomerID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" isPrintWhenDetailOverflows="true" uuid="9a434e99-0a6f-4780-a303-23aa0a5716f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a73e5ba-d8b9-4556-b3c9-dcb15ae72fc8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{OrderID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="30" uuid="3dfba345-52b2-45c0-a9dd-ee995230b978">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f4928692-b248-42ac-b3a2-77ba3a55473e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{EmployeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="100" height="30" uuid="dff9ea2b-5d8f-4170-955e-4e72aa4fc9d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6409fc7-9c07-4ce2-b6ed-cf4a6936acb3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ShipAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="8" width="100" height="30" uuid="b4b9eade-f09d-478d-9f36-b44db5b77e11">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="704631c7-dd69-49bd-9044-d40bdf64c2a9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CustomerID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
